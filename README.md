@@ -29,7 +29,7 @@ X ve Y kısımlarını kendinize göre düzeltebilirsiniz.
 FULLHD ekrana göre tanımlanmıştır.
 
 `barkodnoenlilisimoku.py` barkodu kameradan alır, içinde "/" varsa patoloji numarası olduğunu anlar, Patoloji modülüne geçip ilgili yere yapıştırır ve arar. 
-Hasta ismini okumak için üstteki dosyayı çalıştırır. 
+Hasta ismini okumak için `ocr-isimoku-py` dosyayı çalıştırır. 
 Kod içinde bu yolu bilgisyardaki dosya yoluna göre düzenleyin.
 
 
