@@ -22,6 +22,7 @@ pip install requests
 4. Barkoddan elde edilen hasta numarası, Enlil patoloji sistemine gönderilebilir.
 5. Enlil patoloji sisteminde barkoda göre hasta bilgilerini bulur ve hasta ismini sesli okur.
 
+Yukarıdaki dosya yerine, aynı işi gören iki ayrı py dosyası `barkodnoenlilisimoku.py` ve `ocr-isimoku-py` kullanabilirsiniz:
 İki ayrı dosya, birbiri ile bağlantılı olarak çalışabilir:
 `ocr-isimoku-py` Hasta isminin olduğu alanı spesifik olarak okur. 
 X ve Y kısımlarını kendinize göre düzeltebilirsiniz. 
@@ -37,4 +38,5 @@ Kod içinde bu yolu bilgisyardaki dosya yoluna göre düzenleyin.
 - OCR işlemi için resmin yolunu belirlerken hasta numarasına göre bir dosya adı kullanılmaktadır. 
 - Enlil sistemine veri gönderme kısmı için uygun API endpoint'inizi `requests.post` ile güncellemelisiniz.
 - Barkod okuma, pyzbar kütüphanesi kullanılarak gerçekleştirilir.
+- `ocr-isimoku-py` makro içeren fareniz varsa tuşa tanımlayıp hasta ismi kontrolünde ayrıca kullanabilirsiniz.
 ```
