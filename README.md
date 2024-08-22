@@ -18,8 +18,9 @@ pip install requests
 
 1. `test.py` dosyasını çalıştırın.
 2. Kamera açıldığında, barkodu kameraya tutun.
-3. Barkod okunduğunda, eğer barkod bir patoloji numarasına aitse, ilgili resimden OCR teknolojisi ile isim okunur ve sesli olarak okunur.
-4. Okunan isim ve barkoddan elde edilen hasta numarası, Enlil patoloji sistemine gönderilebilir.
+3. Barkodu sesli olarak okunur.
+4. Barkoddan elde edilen hasta numarası, Enlil patoloji sistemine gönderilebilir.
+5. Enlil patoloji sisteminde barkoda göre hasta bilgilerini bulur ve hasta ismini sesli okur.
 
 İki ayrı dosya, birbiri ile bağlantılı olarak çalışabilir:
 `ocr-isimoku-py` Hasta isminin olduğu alanı spesifik olarak okur. 
