@@ -1,6 +1,3 @@
-
-
-```markdown
 # Enlil Patoloji Sistemi Entegrasyonu ile Barkod Okuma ve OCR İsim Okuma
 
 Bu proje, bir barkod tarayıcı ve OCR teknolojisi kullanarak barkod numarasını ve hasta ismini okuyup, Enlil patoloji sistemine gönderen bir Python uygulamasıdır.
