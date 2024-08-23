@@ -8,7 +8,7 @@ import os
 import subprocess  # Dış dosya çalıştırmak için
 
 def play_sound(text):
-    if text.strip():  # Metin boş değilse okut
+    if len(text.strip()) >= 4:  # Metin 4 karakter ve üzerindeyse okut
         from gtts import gTTS
         tts = gTTS(text=text, lang='tr')
         tts.save("output.mp3")
@@ -31,9 +31,7 @@ def activate_enlil_window():
     hwnd = find_enlil_window()
     if hwnd:
         ctypes.windll.user32.SetForegroundWindow(hwnd)
-        # Tam ekranı bozmadan pencereyi ön plana getiriyoruz.
         time.sleep(0.8)
-        # Tıklama ve metin yapıştırma işlemleri
         pyautogui.click(211, 109)
         time.sleep(0.5)
         pyautogui.hotkey('ctrl', 'a')
@@ -43,10 +41,9 @@ def activate_enlil_window():
         pyautogui.press('enter')
         time.sleep(0.5)
         pyautogui.click(147, 198)
-        time.sleep(1)  # Çift tıklama arasında 1 saniye bekleme süresi
+        time.sleep(1)
         pyautogui.doubleClick(147, 198)
         time.sleep(0.5)
-        # OCR işlemi için dış dosya çalıştırma
         subprocess.Popen(['python', 'C:\\Users\\user\\Documents\\python kodlarım\\ocr-isimoku.pyw'])
         time.sleep(2)
     else:
