@@ -8,7 +8,7 @@ import os
 import subprocess  # Dış dosya çalıştırmak için
 
 def play_sound(text):
-    if len(text.strip()) >= 4:  # Metin 4 karakter ve üzerindeyse okut
+    if len(text.strip()) >= 4 and "/" in text:  # Metin 4 karakter ve "/" içeriyorsa okut
         from gtts import gTTS
         tts = gTTS(text=text, lang='tr')
         tts.save("output.mp3")
@@ -56,11 +56,10 @@ def decode_barcode(frame):
     barcodes = pyzbar.decode(gray)
     for barcode in barcodes:
         barcode_data = barcode.data.decode("utf-8")
-        if "/" in barcode_data:
+        if len(barcode_data) >= 4 and "/" in barcode_data:  # Metin 4 karakter ve "/" içeriyorsa düzelt
             barcode_data = barcode_data.replace("/", "taksim")
-        play_beep()
-        play_sound(barcode_data)
-        if "taksim" in barcode_data:
+            play_beep()
+            play_sound(barcode_data)
             pyperclip.copy(barcode_data.replace("taksim", "/"))
             activate_enlil_window()
         return barcode_data
