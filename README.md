@@ -33,6 +33,8 @@ FULLHD ekrana göre tanımlanmıştır.
 Hasta ismini okumak için `ocr-isimoku-py` dosyayı çalıştırır. 
 Kod içinde bu yolu bilgisyardaki dosya yoluna göre düzenleyin.
 
+test2.py Bu kod, barkod olmayan ancak "?????/24" gibi numara ve "/" karakteri içeren yazıları da algılar ve barkod okunmuş gibi işlem yapar. Ayrıca, number_range ve year_suffix değişkenleri sayesinde sayı aralığı ve yıl ekini ileride kolayca değiştirebilirsiniz. Kodda her fonksiyon ve önemli adımlar için açıklamalar eklenmiştir.
+
 
 ## Notlar
 
