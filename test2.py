@@ -173,8 +173,8 @@ def main():
         return
 
     # Çözünürlüğü 640x480 olarak ayarla
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
 
     # Ayarlanabilir sayı aralığı ve yıl eki
     number_range = (15000, 25000)
